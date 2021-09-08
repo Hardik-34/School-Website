@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+.html,body{
+    height: 100%;
+
+}
+.body{
+    display: grid;
+    place-items: center;
+    background-color: #ccbcbc;
+
+font-family: poppins;
+
+}
+.wrapper{
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    
+    max-width: 10000px;
+    margin: 0 auto;
+
+}
+.wrapper{
+    grid-template-columns: repeat(3,1fr);
+}
+.team{
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.team:nth-child(1):before{
+    background-image: url(/udanwing.jpeg);
+}
+.team:nth-child(2):before{
+    background-image: url(/vision\ petals.jpeg);
+}
+.team:nth-child(3):before{
+    background-image: url(/vision\ mantra.jpeg);
+}
+.team:nth-child(4):before{
+    background-image: url(/harshdeep\ hostel.jpeg);
+}
+.team:nth-child(5):before{
+    background-image: url(/imac\ lab.jpeg);
+}
+.team:nth-child(6):before{
+    background-image: url(/apple\ distinguished.jpg);
+}
+.team:nth-child(7):before{
+    background-image: url(/fee.png);
+}
+.team:nth-child(8):before{
+    background-image: url(/classroom.jpeg);
+}
+.team:nth-child(9):before{
+    background-image: url(/Swad.jpeg);
+}
+
+
+.team::before{
+    content: '' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    -webkit-background-size: cover ;
+    background-size: cover;
+    background-position: 0 0;
+    transition: all .5s ease;
+    pointer-events: none;
+
+
+}
+.team:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: all .5s ease;
+    background-image: linear-gradient(to top,rgba(0,0,0,0.9),rgba(255,255,255,0.3));
+    transform: translateY(-50%);
+}
+.info{
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-grid;
+    display: flex;
+    flex-direction: column;
+z-index: 1;
+     align-items: center;
+     transition: all .5s ease;
+ 
+    padding: 16px;
+    width: 100%;
+
+}
+.info h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    background: #000;
+    padding: 3px 35px;
+
+}
+.info p{
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+.btn{
+    text-decoration: none;
+    margin-top: 25px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: bold;
+
+text-transform: uppercase;
+color: #fff;
+background-color: deepskyblue;
+border-radius: 50px;
+}
+.team:after{
+    transform: translateY(0);
+
+}
+.info{
+    transform: translateY(calc(100% - 64px));
+}
+.team:hover::after{
+    transform: translateY(-100%);
+
+}
+.team:hover::before{
+    transform: translateY(-10%);
+
+}
+.team:hover:after{
+    transform: translateY(-10%);
+
+}
+.team:hover .info{
+    transform: translateY(-10%);
+    
+}
+
